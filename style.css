@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.table-container {
+    position: relative;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 20px;
+}
+
+th, td {
+    border: 1px solid #000;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+}
+
+td:hover {
+    background-color: rgba(0, 255, 89, 0.171);
+}
+
+.diagonal-header {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+    text-align: center; /* Center the text */
+    white-space: nowrap; /* Prevent line break */
+}
+
+.diagonal-header div {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 12px; 
+    transform-origin: center center; 
+    left: 0; 
+    top: 50%; 
+}
+
+.diagonal-header div:first-child {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.diagonal-header div:last-child {
+    transform: translateY(50%) rotate(45deg); 
+}
+
+.diagonal-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 70%; /* Adjust the width of the line */
+    border-top: 1px solid #000; /* Border style for the line */
+}
+
+td.active {
+    background-color: rgb(0, 255, 0);
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7x7 Table with Hover Effect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Distribusi Peluang Pelemparan 2 Dadu</h1>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th class="diagonal-header">
+                        <div class="diagonal-text">Dadu 2<br>Dadu 1</div>
+                        <div class="diagonal-line"></div> <!-- Diagonal Line -->
+                    </th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                </tr>
+            </thead>
+            <tbody>
+                <script>
+                    for (let i = 1; i <= 6; i++) {
+                        document.write('<tr><th>' + i + '</th>');
+                        for (let j = 1; j <= 6; j++) {
+                            document.write('<td data-row="' + i + '" data-col="' + j + '"></td>');
+                        }
+                        document.write('</tr>');
+                    }
+                </script>
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
